@@ -110,6 +110,9 @@ This is a full-stack portfolio application built with React and Express, featuri
 - Improved contact section with customizable contact info
 - Fixed GitHub integration to pull real user repositories
 - Applied consistent black and white color scheme throughout
+- Fully personalized portfolio with Quadri Abdulsalam's real information
+- Added actual GitHub profile photo without border per user preference
+- Updated skills to reflect multi-disciplinary expertise (frontend dev, graphics, writing, video editing)
 
 ## User Preferences
 

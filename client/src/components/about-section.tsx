@@ -21,7 +21,7 @@ export default function AboutSection() {
             <img 
               src="https://avatars.githubusercontent.com/u/101266782?v=4" 
               alt="Quadri Abdulsalam" 
-              className="w-80 h-80 object-cover mx-auto border-4 border-white shadow-2xl rounded-lg"
+              className="w-80 h-80 object-cover mx-auto shadow-2xl rounded-lg"
             />
           </div>
           
