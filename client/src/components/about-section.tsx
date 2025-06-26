@@ -29,14 +29,14 @@ export default function AboutSection() {
           <div className="animate-slide-up">
             <h3 className="text-2xl font-semibold mb-6">About Me</h3>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              I'm a passionate frontend developer who loves building modern web applications 
-              with React, JavaScript, and the latest web technologies. I focus on creating 
-              user-friendly interfaces that are both beautiful and functional.
+              I'm Quadri Abdulsalam, a passionate frontend developer who specializes in building 
+              modern, responsive web applications. I love working with React, JavaScript, and 
+              cutting-edge web technologies to create seamless user experiences.
             </p>
             <p className="text-gray-600 mb-8 leading-relaxed">
-              My approach combines clean, maintainable code with great user experience design. 
-              I'm always learning new technologies and best practices to stay current in this 
-              fast-evolving field. Check out my GitHub projects below to see my work!
+              My development philosophy centers on writing clean, maintainable code while 
+              prioritizing user experience and performance. I'm constantly exploring new 
+              technologies and best practices to deliver exceptional digital solutions.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

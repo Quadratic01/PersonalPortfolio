@@ -100,8 +100,8 @@ export default function ContactSection() {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Get In Touch</h2>
           <div className="w-24 h-1 bg-black mx-auto mb-8"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            I'm always interested in new opportunities and collaborations. 
-            Whether you have a project in mind or just want to chat, feel free to reach out!
+            Let's connect! I'm always open to discussing new opportunities, collaborations, 
+            or answering any questions about my work. Drop me a message below.
           </p>
         </div>
 
