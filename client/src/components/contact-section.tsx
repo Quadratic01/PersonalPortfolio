@@ -58,19 +58,19 @@ export default function ContactSection() {
     {
       icon: Mail,
       title: 'Email',
-      value: 'your.email@example.com',
-      href: 'mailto:your.email@example.com'
+      value: 'Available on GitHub',
+      href: 'https://github.com/Quadratic01'
     },
     {
       icon: Phone,
-      title: 'Phone',
-      value: 'Available upon request',
+      title: 'Company',
+      value: '@richard',
       href: null
     },
     {
       icon: MapPin,
       title: 'Location',
-      value: 'Remote / Your City',
+      value: 'Nigeria',
       href: null
     },
   ];
@@ -78,17 +78,17 @@ export default function ContactSection() {
   const socialLinks = [
     {
       icon: Github,
-      href: `https://github.com/${import.meta.env.VITE_GITHUB_USERNAME || 'octocat'}`,
+      href: 'https://github.com/Quadratic01',
       label: 'GitHub'
     },
     {
       icon: Linkedin,
-      href: 'https://linkedin.com/in/yourprofile',
+      href: 'https://linkedin.com/in/quadri-abdulsalam',
       label: 'LinkedIn'
     },
     {
       icon: Twitter,
-      href: 'https://twitter.com/yourhandle',
+      href: 'https://twitter.com/_Quadraticc',
       label: 'Twitter'
     },
   ];

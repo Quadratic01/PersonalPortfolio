@@ -17,7 +17,7 @@ export default function HeroSection() {
           </h1>
           <div className="text-xl md:text-2xl text-gray-600 mb-8 h-8 overflow-hidden">
             <span className="block animate-typing whitespace-nowrap">
-              Frontend Developer & UI/UX Enthusiast
+              Frontend Developer & Creative Professional
             </span>
           </div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-12 leading-relaxed">

@@ -18,25 +18,25 @@ export default function AboutSection() {
         
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-slide-up">
-            <div className="w-80 h-80 bg-gradient-to-br from-gray-100 to-gray-300 mx-auto border-4 border-white shadow-2xl flex items-center justify-center">
-              <div className="text-center text-gray-600">
-                <Code className="w-16 h-16 mx-auto mb-4" />
-                <p className="text-sm font-medium">Your Photo Here</p>
-              </div>
-            </div>
+            <img 
+              src="https://avatars.githubusercontent.com/u/101266782?v=4" 
+              alt="Quadri Abdulsalam" 
+              className="w-80 h-80 object-cover mx-auto border-4 border-white shadow-2xl rounded-lg"
+            />
           </div>
           
           <div className="animate-slide-up">
             <h3 className="text-2xl font-semibold mb-6">About Me</h3>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              I'm Quadri Abdulsalam, a passionate frontend developer who specializes in building 
-              modern, responsive web applications. I love working with React, JavaScript, and 
-              cutting-edge web technologies to create seamless user experiences.
+              I'm Quadri Abdulsalam, a versatile creative professional based in Nigeria. 
+              I'm a frontend developer, dynamic graphics designer, ebook ghostwriter, and video editor. 
+              I specialize in building modern web applications and creating compelling visual content.
             </p>
             <p className="text-gray-600 mb-8 leading-relaxed">
-              My development philosophy centers on writing clean, maintainable code while 
-              prioritizing user experience and performance. I'm constantly exploring new 
-              technologies and best practices to deliver exceptional digital solutions.
+              With expertise spanning multiple creative domains, I bring a unique perspective to 
+              every project. Whether it's developing responsive web applications, designing 
+              eye-catching graphics, or crafting engaging content, I'm passionate about 
+              delivering high-quality creative solutions.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

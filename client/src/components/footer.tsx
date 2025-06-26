@@ -6,23 +6,23 @@ export default function Footer() {
   const socialLinks = [
     {
       icon: Github,
-      href: `https://github.com/${import.meta.env.VITE_GITHUB_USERNAME || 'octocat'}`,
+      href: 'https://github.com/Quadratic01',
       label: 'GitHub'
     },
     {
       icon: Linkedin,
-      href: 'https://linkedin.com/in/yourprofile',
+      href: 'https://linkedin.com/in/quadri-abdulsalam',
       label: 'LinkedIn'
     },
     {
       icon: Twitter,
-      href: 'https://twitter.com/yourhandle',
+      href: 'https://twitter.com/_Quadraticc',
       label: 'Twitter'
     },
     {
       icon: Mail,
-      href: 'mailto:hello@portfolio.dev',
-      label: 'Email'
+      href: 'https://github.com/Quadratic01',
+      label: 'Contact'
     },
   ];
 

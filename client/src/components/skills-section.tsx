@@ -1,28 +1,28 @@
-import { Code, Database, Globe, Smartphone, GitBranch, Zap } from 'lucide-react';
-import { SiReact, SiJavascript, SiTypescript, SiHtml5, SiCss3, SiTailwindcss, SiGit, SiNodedotjs } from 'react-icons/si';
+import { Code, Database, Globe, Smartphone, GitBranch, Zap, Palette, Video, BookOpen } from 'lucide-react';
+import { SiReact, SiJavascript, SiTypescript, SiHtml5, SiCss3, SiTailwindcss, SiGit, SiNodedotjs, SiAdobe, SiFigma } from 'react-icons/si';
 
 export default function SkillsSection() {
   const skillCategories = [
     {
-      title: 'Frontend',
-      icon: Globe,
+      title: 'Frontend Development',
+      icon: Code,
       skills: [
-        { name: 'React', icon: SiReact, level: 90 },
-        { name: 'JavaScript', icon: SiJavascript, level: 85 },
-        { name: 'TypeScript', icon: SiTypescript, level: 80 },
+        { name: 'React', icon: SiReact, level: 85 },
+        { name: 'JavaScript', icon: SiJavascript, level: 90 },
         { name: 'HTML5', icon: SiHtml5, level: 95 },
         { name: 'CSS3', icon: SiCss3, level: 90 },
-        { name: 'Tailwind CSS', icon: SiTailwindcss, level: 85 },
+        { name: 'Responsive Design', icon: Smartphone, level: 85 },
+        { name: 'Git', icon: SiGit, level: 80 },
       ]
     },
     {
-      title: 'Tools & Others',
-      icon: Code,
+      title: 'Creative & Design',
+      icon: Palette,
       skills: [
-        { name: 'Git', icon: SiGit, level: 85 },
-        { name: 'Node.js', icon: SiNodedotjs, level: 75 },
-        { name: 'Responsive Design', icon: Smartphone, level: 90 },
-        { name: 'Performance Optimization', icon: Zap, level: 80 },
+        { name: 'Graphics Design', icon: SiAdobe, level: 90 },
+        { name: 'Video Editing', icon: Video, level: 85 },
+        { name: 'Ebook Writing', icon: BookOpen, level: 80 },
+        { name: 'UI Design', icon: SiFigma, level: 75 },
       ]
     }
   ];
