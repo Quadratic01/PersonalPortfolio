@@ -2,10 +2,10 @@ import { Code, Palette, Zap, Users } from 'lucide-react';
 
 export default function AboutSection() {
   const skills = [
-    { icon: Code, name: 'React.js', description: 'Modern web applications' },
-    { icon: Palette, name: 'UI/UX Design', description: 'Beautiful interfaces' },
-    { icon: Zap, name: 'Performance', description: 'Optimized experiences' },
-    { icon: Users, name: 'Collaboration', description: 'Team-focused development' },
+    { icon: Code, name: 'React & JavaScript', description: 'Modern component-based apps' },
+    { icon: Palette, name: 'CSS & Styling', description: 'Responsive, beautiful designs' },
+    { icon: Zap, name: 'Web Performance', description: 'Fast, optimized experiences' },
+    { icon: Users, name: 'Version Control', description: 'Git & collaborative workflows' },
   ];
 
   return (
@@ -18,24 +18,25 @@ export default function AboutSection() {
         
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-slide-up">
-            <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800" 
-              alt="Professional headshot" 
-              className="w-80 h-80 object-cover mx-auto border-4 border-white shadow-2xl"
-            />
+            <div className="w-80 h-80 bg-gradient-to-br from-gray-100 to-gray-300 mx-auto border-4 border-white shadow-2xl flex items-center justify-center">
+              <div className="text-center text-gray-600">
+                <Code className="w-16 h-16 mx-auto mb-4" />
+                <p className="text-sm font-medium">Your Photo Here</p>
+              </div>
+            </div>
           </div>
           
           <div className="animate-slide-up">
-            <h3 className="text-2xl font-semibold mb-6">Passionate Frontend Developer</h3>
+            <h3 className="text-2xl font-semibold mb-6">About Me</h3>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              With expertise in modern frontend development, I specialize in creating 
-              responsive, user-friendly web applications using cutting-edge JavaScript frameworks. 
-              My passion lies in transforming complex problems into simple, elegant solutions.
+              I'm a passionate frontend developer who loves building modern web applications 
+              with React, JavaScript, and the latest web technologies. I focus on creating 
+              user-friendly interfaces that are both beautiful and functional.
             </p>
             <p className="text-gray-600 mb-8 leading-relaxed">
-              I believe in writing clean, maintainable code and staying up-to-date with the 
-              latest industry trends and best practices. When I'm not coding, you'll find me 
-              exploring new technologies or contributing to open-source projects.
+              My approach combines clean, maintainable code with great user experience design. 
+              I'm always learning new technologies and best practices to stay current in this 
+              fast-evolving field. Check out my GitHub projects below to see my work!
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

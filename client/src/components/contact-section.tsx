@@ -58,19 +58,19 @@ export default function ContactSection() {
     {
       icon: Mail,
       title: 'Email',
-      value: 'hello@portfolio.dev',
-      href: 'mailto:hello@portfolio.dev'
+      value: 'your.email@example.com',
+      href: 'mailto:your.email@example.com'
     },
     {
       icon: Phone,
       title: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      value: 'Available upon request',
+      href: null
     },
     {
       icon: MapPin,
       title: 'Location',
-      value: 'Available Remote',
+      value: 'Remote / Your City',
       href: null
     },
   ];

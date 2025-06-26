@@ -13,16 +13,17 @@ export default function HeroSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Frontend Developer
+            Hi, I'm [Your Name]
           </h1>
           <div className="text-xl md:text-2xl text-gray-600 mb-8 h-8 overflow-hidden">
             <span className="block animate-typing whitespace-nowrap">
-              Creating Beautiful Web Experiences
+              Frontend Developer & UI/UX Enthusiast
             </span>
           </div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-12 leading-relaxed">
-            I craft beautiful, responsive web experiences with modern technologies. 
-            Passionate about clean code, elegant design, and seamless user interactions.
+            I specialize in building modern, responsive web applications using React, JavaScript, 
+            and cutting-edge frontend technologies. I love turning ideas into beautiful, 
+            functional digital experiences.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button

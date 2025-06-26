@@ -30,8 +30,8 @@ export default function Footer() {
     <footer className="bg-black text-white py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <p className="text-lg font-semibold mb-4">Frontend Developer</p>
-          <p className="text-gray-400 mb-6">Creating beautiful web experiences</p>
+          <p className="text-lg font-semibold mb-4">Your Name</p>
+          <p className="text-gray-400 mb-6">Frontend Developer</p>
           
           <div className="flex justify-center space-x-6 mb-8">
             {socialLinks.map((social, index) => (

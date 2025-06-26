@@ -100,7 +100,19 @@ This is a full-stack portfolio application built with React and Express, featuri
 ## Changelog
 
 - June 26, 2025. Initial setup
+- June 26, 2025. Customized portfolio with placeholders for personalization, fixed GitHub integration, improved black and white design
+
+## Recent Changes
+
+- Updated hero section with personalized greeting template
+- Modified about section with photo placeholder and custom bio
+- Enhanced skills section with frontend-focused technologies
+- Improved contact section with customizable contact info
+- Fixed GitHub integration to pull real user repositories
+- Applied consistent black and white color scheme throughout
 
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+Project focus: Frontend developer portfolio with black and white design theme
+Customization level: High - user wants extensive personalization

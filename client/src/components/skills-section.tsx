@@ -1,0 +1,74 @@
+import { Code, Database, Globe, Smartphone, GitBranch, Zap } from 'lucide-react';
+import { SiReact, SiJavascript, SiTypescript, SiHtml5, SiCss3, SiTailwindcss, SiGit, SiNodedotjs } from 'react-icons/si';
+
+export default function SkillsSection() {
+  const skillCategories = [
+    {
+      title: 'Frontend',
+      icon: Globe,
+      skills: [
+        { name: 'React', icon: SiReact, level: 90 },
+        { name: 'JavaScript', icon: SiJavascript, level: 85 },
+        { name: 'TypeScript', icon: SiTypescript, level: 80 },
+        { name: 'HTML5', icon: SiHtml5, level: 95 },
+        { name: 'CSS3', icon: SiCss3, level: 90 },
+        { name: 'Tailwind CSS', icon: SiTailwindcss, level: 85 },
+      ]
+    },
+    {
+      title: 'Tools & Others',
+      icon: Code,
+      skills: [
+        { name: 'Git', icon: SiGit, level: 85 },
+        { name: 'Node.js', icon: SiNodedotjs, level: 75 },
+        { name: 'Responsive Design', icon: Smartphone, level: 90 },
+        { name: 'Performance Optimization', icon: Zap, level: 80 },
+      ]
+    }
+  ];
+
+  return (
+    <section id="skills" className="py-20 bg-white">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Skills & Technologies</h2>
+          <div className="w-24 h-1 bg-black mx-auto mb-8"></div>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Here are the technologies and tools I work with to bring ideas to life
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-12">
+          {skillCategories.map((category, categoryIndex) => (
+            <div key={categoryIndex} className="bg-gray-50 p-8 border border-gray-200">
+              <div className="flex items-center mb-6">
+                <category.icon className="w-8 h-8 mr-3 text-black" />
+                <h3 className="text-2xl font-semibold">{category.title}</h3>
+              </div>
+              
+              <div className="space-y-6">
+                {category.skills.map((skill, skillIndex) => (
+                  <div key={skillIndex} className="space-y-2">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center">
+                        <skill.icon className="w-5 h-5 mr-3 text-gray-700" />
+                        <span className="font-medium">{skill.name}</span>
+                      </div>
+                      <span className="text-sm text-gray-600">{skill.level}%</span>
+                    </div>
+                    <div className="w-full bg-gray-200 h-2">
+                      <div 
+                        className="bg-black h-2 transition-all duration-1000 ease-out"
+                        style={{ width: `${skill.level}%` }}
+                      ></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
