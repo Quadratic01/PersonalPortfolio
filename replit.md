@@ -113,6 +113,9 @@ This is a full-stack portfolio application built with React and Express, featuri
 - Fully personalized portfolio with Quadri Abdulsalam's real information
 - Added actual GitHub profile photo without border per user preference
 - Updated skills to reflect multi-disciplinary expertise (frontend dev, graphics, writing, video editing)
+- Implemented email functionality using nodemailer with Gmail SMTP
+- Enhanced GitHub filtering to show only personal projects (excluding forks, config repos)
+- Set up automated email notifications for contact form submissions
 
 ## User Preferences
 

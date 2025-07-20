@@ -2,9 +2,10 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertContactSchema, type InsertProject } from "@shared/schema";
+import { sendContactEmail } from "./email";
 import { z } from "zod";
 
-const GITHUB_USERNAME = process.env.GITHUB_USERNAME || "octocat";
+const GITHUB_USERNAME = process.env.GITHUB_USERNAME || "Quadratic01";
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || "";
 
 interface GitHubRepo {
@@ -52,9 +53,17 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       const repos: GitHubRepo[] = await response.json();
       
-      // Filter out private repos and forks, transform to our schema
-      const projects: InsertProject[] = repos
-        .filter(repo => !repo.private && !repo.fork)
+      // Filter for personal projects (exclude forks and certain repo types)
+      const personalProjects = repos.filter(repo => 
+        !repo.private && 
+        !repo.fork && 
+        repo.name !== GITHUB_USERNAME && // Exclude profile README repo
+        !repo.name.includes('config') && // Exclude config repos
+        !repo.name.includes('template') // Exclude template repos
+      );
+
+      // Transform to our schema
+      const projects: InsertProject[] = personalProjects
         .map(repo => ({
           name: repo.name,
           description: repo.description,
@@ -85,7 +94,20 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const contactData = insertContactSchema.parse(req.body);
       const contact = await storage.createContact(contactData);
       
-      // In a real application, you might want to send an email here
+      // Send email notification
+      try {
+        await sendContactEmail({
+          name: contactData.name,
+          email: contactData.email,
+          message: contactData.message,
+          subject: contactData.subject
+        });
+        console.log("Contact email sent successfully");
+      } catch (emailError) {
+        console.error("Failed to send contact email:", emailError);
+        // Don't fail the request if email fails, but log it
+      }
+      
       console.log("New contact submission:", contact);
       
       res.json({ success: true, message: "Message sent successfully!" });

@@ -25,7 +25,7 @@ export const contacts = pgTable("contacts", {
   id: serial("id").primaryKey(),
   name: text("name").notNull(),
   email: text("email").notNull(),
-  subject: text("subject").notNull(),
+  subject: text("subject").default("Portfolio Contact"),
   message: text("message").notNull(),
   created_at: timestamp("created_at").defaultNow().notNull(),
 });
