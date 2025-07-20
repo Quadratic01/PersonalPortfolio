@@ -11,6 +11,7 @@ export default function SkillsSection() {
         { name: 'JavaScript', icon: SiJavascript, level: 90 },
         { name: 'HTML5', icon: SiHtml5, level: 95 },
         { name: 'CSS3', icon: SiCss3, level: 90 },
+        { name: 'Tailwind CSS', icon: SiTailwindcss, level: 88 },
         { name: 'Responsive Design', icon: Smartphone, level: 85 },
         { name: 'Git', icon: SiGit, level: 80 },
       ]
@@ -28,12 +29,12 @@ export default function SkillsSection() {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-white">
+    <section id="skills" className="py-20 bg-white dark:bg-slate-950 transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Skills & Technologies</h2>
-          <div className="w-24 h-1 bg-black mx-auto mb-8"></div>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">Skills & Technologies</h2>
+          <div className="w-24 h-1 bg-emerald-500 mx-auto mb-8"></div>
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Here are the technologies and tools I work with to bring ideas to life
           </p>
         </div>

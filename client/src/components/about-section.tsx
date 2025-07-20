@@ -9,11 +9,11 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gray-50">
+    <section id="about" className="py-20 bg-gray-50 dark:bg-slate-900 transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">About Me</h2>
-          <div className="w-24 h-1 bg-black mx-auto"></div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">About Me</h2>
+          <div className="w-24 h-1 bg-emerald-500 mx-auto"></div>
         </div>
         
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -26,13 +26,13 @@ export default function AboutSection() {
           </div>
           
           <div className="animate-slide-up">
-            <h3 className="text-2xl font-semibold mb-6">About Me</h3>
-            <p className="text-gray-600 mb-6 leading-relaxed">
+            <h3 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">About Me</h3>
+            <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
               I'm Quadri Abdulsalam, a versatile creative professional based in Nigeria. 
               I'm a frontend developer, dynamic graphics designer, ebook ghostwriter, and video editor. 
               I specialize in building modern web applications and creating compelling visual content.
             </p>
-            <p className="text-gray-600 mb-8 leading-relaxed">
+            <p className="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
               With expertise spanning multiple creative domains, I bring a unique perspective to 
               every project. Whether it's developing responsive web applications, designing 
               eye-catching graphics, or crafting engaging content, I'm passionate about 
@@ -41,12 +41,12 @@ export default function AboutSection() {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {skills.map((skill, index) => (
-                <div key={index} className="bg-white p-4 shadow-md hover:shadow-lg transition-shadow duration-200">
+                <div key={index} className="bg-white dark:bg-slate-800 p-4 shadow-md hover:shadow-lg transition-shadow duration-200 rounded-lg border border-gray-200 dark:border-slate-700">
                   <div className="flex items-center mb-2">
-                    <skill.icon className="w-6 h-6 mr-3 text-black" />
-                    <span className="font-medium">{skill.name}</span>
+                    <skill.icon className="w-6 h-6 mr-3 text-emerald-500" />
+                    <span className="font-medium text-gray-900 dark:text-white">{skill.name}</span>
                   </div>
-                  <p className="text-sm text-gray-600">{skill.description}</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">{skill.description}</p>
                 </div>
               ))}
             </div>

@@ -93,6 +93,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const contactData = insertContactSchema.parse(req.body);
       const contact = await storage.createContact(contactData);
+
+      console.log("Contact form data:", contactData)
       
       // Send email notification
       try {

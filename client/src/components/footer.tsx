@@ -27,7 +27,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-black text-white py-12">
+    <footer className="bg-slate-900 dark:bg-black text-white py-12 transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="text-lg font-semibold mb-4">Quadri Abdulsalam</p>

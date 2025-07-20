@@ -40,21 +40,21 @@ export default function ProjectsSection() {
 
   if (error) {
     return (
-      <section id="projects" className="py-20 bg-white">
+      <section id="projects" className="py-20 bg-white dark:bg-slate-950 transition-colors duration-300">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-red-600">Failed to load projects. Please check your GitHub configuration.</p>
+          <p className="text-red-600 dark:text-red-400">Failed to load projects. Please check your GitHub configuration.</p>
         </div>
       </section>
     );
   }
 
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="py-20 bg-white dark:bg-slate-950 transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">My Projects</h2>
-          <div className="w-24 h-1 bg-black mx-auto mb-8"></div>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">My Projects</h2>
+          <div className="w-24 h-1 bg-emerald-500 mx-auto mb-8"></div>
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             A collection of projects showcasing my skills in frontend development, 
             fetched directly from my GitHub repositories.
           </p>
@@ -67,7 +67,7 @@ export default function ProjectsSection() {
               key={filter.id}
               variant={selectedFilter === filter.id ? 'default' : 'outline'}
               onClick={() => setSelectedFilter(filter.id)}
-              className={selectedFilter === filter.id ? 'bg-black text-white' : ''}
+              className={selectedFilter === filter.id ? 'bg-emerald-500 hover:bg-emerald-600 text-white border-emerald-500' : 'border-emerald-500 text-emerald-500 dark:text-emerald-400 hover:bg-emerald-500 hover:text-white'}
             >
               {filter.label}
             </Button>
