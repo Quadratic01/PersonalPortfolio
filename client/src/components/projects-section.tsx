@@ -79,7 +79,7 @@ export default function ProjectsSection() {
           {isLoading ? (
             // Loading skeletons
             Array.from({ length: 6 }).map((_, index) => (
-              <Card key={index} className="border border-gray-200">
+              <Card key={index} className="border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800">
                 <Skeleton className="w-full h-48" />
                 <CardContent className="p-6">
                   <Skeleton className="h-6 w-3/4 mb-3" />
@@ -98,25 +98,33 @@ export default function ProjectsSection() {
             ))
           ) : filteredProjects.length === 0 ? (
             <div className="col-span-full text-center py-12">
-              <p className="text-gray-600">No projects found for the selected filter.</p>
+              <p className="text-gray-600 dark:text-gray-300">No projects found for the selected filter.</p>
             </div>
           ) : (
             filteredProjects.map((project) => (
-              <Card key={project.id} className="group border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                  <Github className="w-12 h-12 text-gray-400" />
+              <Card key={project.id} className="group border border-gray-200 dark:border-slate-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white dark:bg-slate-800">
+                <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 dark:from-slate-700 dark:to-slate-600 flex items-center justify-center overflow-hidden">
+                  {project.image_url ? (
+                    <img 
+                      src={project.image_url} 
+                      alt={project.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  ) : (
+                    <Github className="w-12 h-12 text-gray-400 dark:text-gray-500" />
+                  )}
                 </div>
                 
                 <CardContent className="p-6">
                   <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-xl font-semibold">{project.name}</h3>
-                    <div className="flex items-center text-sm text-gray-500">
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{project.name}</h3>
+                    <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
                       <Star className="w-4 h-4 mr-1" />
                       {project.stargazers_count}
                     </div>
                   </div>
                   
-                  <p className="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm leading-relaxed line-clamp-3">
                     {project.description || 'No description available'}
                   </p>
                   
@@ -134,7 +142,7 @@ export default function ProjectsSection() {
                     ))}
                   </div>
                   
-                  <div className="flex items-center text-xs text-gray-500 mb-4">
+                  <div className="flex items-center text-xs text-gray-500 dark:text-gray-400 mb-4">
                     <Calendar className="w-3 h-3 mr-1" />
                     Updated {formatDate(project.updated_at)}
                   </div>

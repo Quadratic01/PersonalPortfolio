@@ -17,6 +17,7 @@ export const projects = pgTable("projects", {
   language: text("language"),
   stargazers_count: integer("stargazers_count").default(0),
   topics: text("topics").array(),
+  image_url: text("image_url"),
   created_at: timestamp("created_at").notNull(),
   updated_at: timestamp("updated_at").notNull(),
 });

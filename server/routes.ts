@@ -62,16 +62,25 @@ export async function registerRoutes(app: Express): Promise<Server> {
         !repo.name.includes('template') // Exclude template repos
       );
 
+      // Define project images mapping
+      const projectImages: Record<string, string> = {
+        'PersonalPortfolio': 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop&crop=center',
+        'Edusity': 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&h=400&fit=crop&crop=center',
+        'react_movies_app': 'https://images.unsplash.com/photo-1489599735734-79b4169cea81?w=800&h=400&fit=crop&crop=center',
+        'Color-Flipper': 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=800&h=400&fit=crop&crop=center',
+      };
+
       // Transform to our schema
       const projects: InsertProject[] = personalProjects
         .map(repo => ({
           name: repo.name,
-          description: repo.description,
+          description: repo.description || null,
           html_url: repo.html_url,
-          homepage: repo.homepage,
-          language: repo.language,
-          stargazers_count: repo.stargazers_count,
+          homepage: repo.homepage || null,
+          language: repo.language || null,
+          stargazers_count: repo.stargazers_count || 0,
           topics: repo.topics || [],
+          image_url: projectImages[repo.name] || null,
           created_at: new Date(repo.created_at),
           updated_at: new Date(repo.updated_at),
         }));

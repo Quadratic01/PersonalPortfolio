@@ -110,20 +110,20 @@ export default function ContactSection() {
           <div className="space-y-8">
             {contactInfo.map((item, index) => (
               <div key={index} className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-black text-white flex items-center justify-center">
+                <div className="w-12 h-12 bg-emerald-500 text-white flex items-center justify-center rounded-lg">
                   <item.icon className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-1">{item.title}</h3>
+                  <h3 className="text-lg font-semibold mb-1 text-gray-900 dark:text-white">{item.title}</h3>
                   {item.href ? (
                     <a 
                       href={item.href}
-                      className="text-gray-600 hover:text-black transition-colors"
+                      className="text-gray-600 dark:text-gray-300 hover:text-emerald-500 transition-colors"
                     >
                       {item.value}
                     </a>
                   ) : (
-                    <p className="text-gray-600">{item.value}</p>
+                    <p className="text-gray-600 dark:text-gray-300">{item.value}</p>
                   )}
                 </div>
               </div>
@@ -131,7 +131,7 @@ export default function ContactSection() {
 
             {/* Social Links */}
             <div className="pt-8">
-              <h3 className="text-lg font-semibold mb-4">Follow Me</h3>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">Follow Me</h3>
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
                   <a
@@ -139,7 +139,7 @@ export default function ContactSection() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 bg-black text-white hover:bg-gray-800 transition-colors duration-200 flex items-center justify-center"
+                    className="w-12 h-12 bg-emerald-500 text-white hover:bg-emerald-600 transition-colors duration-200 flex items-center justify-center rounded-lg"
                     aria-label={social.label}
                   >
                     <social.icon className="w-5 h-5" />
@@ -150,10 +150,10 @@ export default function ContactSection() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white p-8 shadow-lg">
+          <div className="bg-white dark:bg-slate-800 p-8 shadow-lg rounded-lg">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Name
                 </label>
                 <Input
@@ -164,12 +164,12 @@ export default function ContactSection() {
                   onChange={handleChange}
                   required
                   placeholder="Your Name"
-                  className="border-gray-300 focus:ring-black focus:border-black"
+                  className="border-gray-300 dark:border-slate-600 focus:ring-emerald-500 focus:border-emerald-500 dark:bg-slate-700 dark:text-white dark:placeholder-gray-400"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Email
                 </label>
                 <Input
@@ -180,12 +180,12 @@ export default function ContactSection() {
                   onChange={handleChange}
                   required
                   placeholder="your.email@example.com"
-                  className="border-gray-300 focus:ring-black focus:border-black"
+                  className="border-gray-300 dark:border-slate-600 focus:ring-emerald-500 focus:border-emerald-500 dark:bg-slate-700 dark:text-white dark:placeholder-gray-400"
                 />
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Subject
                 </label>
                 <Input
@@ -196,12 +196,12 @@ export default function ContactSection() {
                   onChange={handleChange}
                   required
                   placeholder="Project Discussion"
-                  className="border-gray-300 focus:ring-black focus:border-black"
+                  className="border-gray-300 dark:border-slate-600 focus:ring-emerald-500 focus:border-emerald-500 dark:bg-slate-700 dark:text-white dark:placeholder-gray-400"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Message
                 </label>
                 <Textarea
@@ -212,14 +212,14 @@ export default function ContactSection() {
                   required
                   rows={6}
                   placeholder="Tell me about your project..."
-                  className="border-gray-300 focus:ring-black focus:border-black resize-none"
+                  className="border-gray-300 dark:border-slate-600 focus:ring-emerald-500 focus:border-emerald-500 resize-none dark:bg-slate-700 dark:text-white dark:placeholder-gray-400"
                 />
               </div>
 
               <Button
                 type="submit"
                 disabled={contactMutation.isPending}
-                className="w-full bg-black text-white hover:bg-gray-800 transition-colors duration-200"
+                className="w-full bg-emerald-500 text-white hover:bg-emerald-600 transition-colors duration-200"
               >
                 {contactMutation.isPending ? (
                   'Sending...'
